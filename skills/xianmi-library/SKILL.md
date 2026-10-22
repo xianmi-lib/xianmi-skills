@@ -20,7 +20,7 @@ Three tools — pick by query intent:
 
 | Intent | Tool | Notes |
 | --- | --- | --- |
-| Conceptual / natural-language question ("如何消除烦恼", "the meaning of causality") | `semantic_search` | Embedding search over the **p05 sutra collection only** (佛教经典, public domain, Simplified Chinese, ~1.8k texts). Returns passages with relevance scores. |
+| Conceptual / natural-language question ("如何消除烦恼", "the meaning of causality") | `semantic_search` | Embedding search over the **p05 collection only** (现代汉语白话译文 of Buddhist scriptures, Simplified Chinese, ~1.8k texts). Returns passages with relevance scores. |
 | Exact quote or keyword lookup ("凡所有相皆是虚妄", an author's name, any term), or anything outside p05 | `search_texts` | Keyword full-text search over the **whole library (~250k pages, both language editions)**. Params: `query`, `lang`, `page` (10/page). |
 | Read the full text of one article | `get_passage` | Param: `path` (e.g. `p01/a/109/764`, from a search result; a full page URL also works). Returns complete Markdown with YAML frontmatter. |
 
@@ -45,7 +45,7 @@ Content exists in two parallel editions: Simplified Chinese (简体, `lang: "zh-
 When quoting or republishing library content, attribute it. Every tool/API response already carries the pointer block; preserve it or cite equivalently:
 
 - Source page URL (e.g. `https://www.xianmi.co/p01/a/109/764/`) + site name 显密文库 (Xianmi Library).
-- License terms by content class (CC0 / MIT / public domain): https://www.xianmi.co/open/ — p05 sutras are public domain; some modern works (p01/p02) and CBETA-sourced texts carry non-commercial terms. Check before republication.
+- License terms by content class (public domain / CC0 / copyrighted modern works): https://www.xianmi.co/open/ — p05 vernacular translations are NOT public domain (copyright remains with the translators); some modern works (p01/p02) and CBETA-sourced texts carry non-commercial terms. Check before republication.
 
 Suggested citation format: `《标题》· 显密文库（xianmi.co）· <page URL>`.
 
